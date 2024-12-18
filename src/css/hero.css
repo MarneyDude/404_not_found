@@ -1,118 +1,114 @@
 .section-hero {
-  padding: 100px 0px 0px 0px;
-  height: 840px;
   background: #576f35;
-  background-image: url(../img/hero/hero–mobile/img-1-mobile.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-position-y: bottom;
+  padding-bottom: 0;
+  padding-top: 100px;
 }
-@media screen and (min-width: 375px) and (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .section-hero {
-    padding: 100px 0px 0px 0px;
-    width: 100%;
-    background: #576f35;
-    background-image: url(../img/hero/hero–mobile/img-1-mobile@2x.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-    background-size: 375px;
-  }
+
+.hero {
+  padding: 0;
+}
+
+.main-text {
+  margin-bottom: 40px;
+  padding: 0 20px;
 }
 
 .hero-title {
   font-weight: 600;
-  /* font-size: 52px; */
+  font-size: 52px;
   line-height: 1;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: #fbfbfb;
   margin-bottom: 20px;
-  font-size: clamp(46px, 2.5vw, 52px);
+  font-size: clamp(2.875rem, 0.6932rem + 10.9091vw, 3.25rem);
 }
 
 .hero-p {
-  font-weight: 500;
-  font-size: 14px;
   line-height: 1.43;
-  color: #fbfbfb;
-  margin-bottom: 40px;
 }
 
+/* For mobile */
+.img-bgr {
+  min-height: 320px;
+  background-image: url(../img/hero/hero–mobile/img-1-mobile.jpg);
+  background-size: cover;
+}
+
+/* For mobile */
+@media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .img-bgr {
+    background-image: url(../img/hero/hero–mobile/img-1-mobile@2x.jpg);
+  }
+}
+
+/* For tablet */
 @media only screen and (min-width: 768px) {
-  .container {
-    max-width: 736px;
-  }
   .section-hero {
-    padding: 120px 0px 0px 0px;
-    width: 100%;
-    height: 1020px;
+    padding-top: 120px;
+  }
+  .img-bgr {
     background-image: url(../img/hero/hero–tablet/img-1-tablet.jpg);
-    background-position: center;
+    min-height: 536px;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: bottom;
   }
-  @media screen and (min-width: 768px) and (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .section-hero {
-      background-image: url(../img/hero/hero–tablet/img-1-tablet@2x.jpg);
-      background-repeat: no-repeat;
-      background-size: 768px;
-    }
-  }
+
   .hero-title {
     font-size: 76px;
-    width: 704px;
     margin-bottom: 24px;
   }
   .hero-p {
-    width: 603px;
-    font-family: 'Inter Tight', sans-serif;
-    font-size: 16px;
+    max-width: 603px;
     line-height: 1.25;
-    color: #fbfbfb;
+  }
+
+  .main-text {
+    margin-bottom: 52px;
+    padding: 0 32px;
+  }
+}
+
+/* For tablet */
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) and (min-resolution: 2dppx) {
+  .img-bgr {
+    background-image: url(../img/hero/hero–tablet/img-1-tablet@2x.jpg);
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  .container {
-    max-width: 1112px;
-  }
   .section-hero {
-    width: 100%;
-    height: 796px;
-    max-width: 1280px;
-    margin: 0 auto;
+    padding: 0;
+  }
+  .hero {
+    display: flex;
+    justify-content: space-between;
+  }
+  .img-bgr {
     background-image: url(../img/hero/hero–desktop/img-1-desktop.jpg);
-    background-position: right;
-    padding-top: 232px;
+    height: 796px;
+    background-size: cover;
+    background-position: center;
+    min-width: 640px;
   }
-  @media screen and (min-width: 1280px) and (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .section-hero {
-      background-image: url(../img/hero/hero–desktop/img-1-desktop@2x.jpg);
-      background-size: contain;
-      background-position: right;
-      background-repeat: no-repeat;
-    }
+
+  .main-text {
+    align-self: flex-end;
+    padding: 0;
+    padding-right: 100px;
   }
+
   .hero-title {
-    font-weight: 600;
-    font-size: 76px;
-    line-height: 1;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    color: #fbfbfb;
-    width: 502px;
+    max-width: 502px;
     margin-bottom: 128px;
   }
   .hero-p {
-    width: 471px;
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.25;
-    color: #fbfbfb;
+    max-width: 471px;
+  }
+}
+
+/* For tablet */
+@media only screen and (min-width: 1280px) and (min-resolution: 192dpi) and (min-resolution: 2dppx) {
+  .img-bgr {
+    background-image: url(../img/hero/hero–desktop/img-1-desktop@2x.jpg);
   }
 }
